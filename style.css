@@ -1,0 +1,31 @@
+/*
+Theme Name:   	NG Super Duper Theme Deluxe
+Theme URI:    	https://github.com/ngratton/wp-woo-child-theme
+Author:       	Nicholas Gratton
+Author URI:     https://www.nicholasgratton.com
+Template:     	storefront
+Description:  	Thème-enfant dans le cadre du cours de Ecom avec King Pascal
+Version:      	1.0.0
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	storefront
+Tags:         	liste, de, tags, à, ajouter
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+Storefront is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+FontAwesome License: SIL Open Font License - http://scripts.sil.org/OFL
+Images License: GNU General Public License v2 or later
+*/
+/*
+ * Add your own custom css below this text.
+ */
+
+ .test-fonction {
+     background-color: red;
+     padding: 25px;
+     border: 1px dotted olivedrab;
+     border-radius: 16px;
+ }
