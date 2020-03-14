@@ -1,15 +1,14 @@
+@charset "UTF-8";
 /*
-Theme Name:   	NG Super Duper Theme Deluxe
-Theme URI:    	https://github.com/ngratton/wp-woo-child-theme
-Author:       	Nicholas Gratton
-Author URI:     https://www.nicholasgratton.com
+Theme Name:     NG Super Duper Theme Deluxe
+Author:         Nicholas Gratton
 Template:     	storefront
-Description:  	Thème-enfant dans le cadre du cours de Ecom avec King Pascal
-Version:      	1.0.0
+Description:  	Thème-enfant dans le cadre du cours Ecom de King Pascal
+Version:      	0.1.0
 License:      	GNU General Public License v2 or later
 License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  	storefront
-Tags:         	liste, de, tags, à, ajouter
+Tags:         	two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 Storefront is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
@@ -23,9 +22,373 @@ Images License: GNU General Public License v2 or later
  * Add your own custom css below this text.
  */
 
- .test-fonction {
-     background-color: red;
-     padding: 25px;
-     border: 1px dotted olivedrab;
-     border-radius: 16px;
- }
+ @import url('https://fonts.googleapis.com/css?family=Oxanium:400,700&display=swap');
+
+
+.woocommerce-loop-product__title {
+  margin: 10px 0;
+  text-align: left;
+  font-family: 'Oxanium', cursive;
+}
+
+.woocommerce-loop-product__link .price {
+  text-align: right;
+}
+
+/*
+*   HEADER
+*/
+
+.site-header {
+  padding-top: 20px;
+  border-bottom: none;
+}
+
+.site-branding {
+  margin: 0;
+}
+
+.site-search {
+  height: 100%;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+.input-text {
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.storefront-hamburger-menu-active .shm-close {
+  color: white;
+}
+
+/*
+*   MAIN NAVIGATION
+*/
+
+.storefront-primary-navigation {
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+  background-color: #4B7281;
+}
+
+.storefront-breadcrumb {
+  background-color: #4B7281;
+  color: #fff;
+  margin: 0 0 2em;
+  padding: .5em 0;
+}
+
+.storefront-breadcrumb a {
+  color: white;
+}
+
+.storefront-primary-navigation {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.main-navigation ul.nav-menu > li > a {
+  padding: 0.5em 1em;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.main-navigation ul.nav-menu > li > a:hover {
+  color: #222;
+}
+
+a:focus,
+.focus a {
+	outline: none !important;
+}
+
+/*
+*   NAVIGATION SECONDAIRE
+*/
+
+.secondary-navigation a {
+  font-size: .8em;
+}
+
+/*
+*   PAGE D'ACCUEIL
+*/
+
+#homepage-splash {
+  background-image: url('./images/header-background.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+#homepage-splash .titre {
+  color: white;
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+#homepage-splash .sous-titre {
+  color: white;
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  text-shadow: 0px 0px 5px black;
+}
+
+h2.homepage-featprod-title {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+h2.homepage-featprod-title span {
+  width: 20%;
+  background-color: white;
+  padding: 5px 25px;
+}
+
+h2.homepage-featprod-title:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  content: '';
+  width: 100%;
+  height: 10px;
+  background-color: lightgray;
+  z-index: -1;
+}
+
+
+
+/*
+*   PAGE CATÉGORIES
+*/
+
+.page-sous-header {
+  background-image: url('./images/header-background.jpg');
+  background-size: cover;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 2em;
+  margin: 0 0 2em;
+}
+
+.page-sous-header span {
+  color: white;
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.storefront-full-width-content.woocommerce-cart .entry-header,
+.storefront-full-width-content.woocommerce-checkout .entry-header,
+.storefront-full-width-content.woocommerce-account .entry-header,
+.storefront-full-width-content .woocommerce-products-header {
+  text-align:left;
+  padding: 0 0 2em;
+}
+
+.product_title .entry-title {
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.product h2 {
+  text-align: center;
+}
+
+.price {
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+}
+
+button.alt:hover,
+input[type="button"].alt:hover,
+input[type="reset"].alt:hover,
+input[type="submit"].alt:hover,
+.button.alt:hover,
+.widget-area .widget a.button.alt :hover {
+  background-color: #4B7281;
+  color: white;
+}
+
+.added_to_cart.alt,
+.added_to_cart,
+.widget a.button.checkout {
+  width: 100%;
+}
+
+ul.products li.product .button {
+  width: 100%;
+}
+
+.site-header-cart .cart-contents {
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+/*
+*
+*   PAGE DE PRODUITS
+*
+*/
+
+body.single-product #primary {
+	float: none;
+	width: 100%;
+}
+
+h1.product_title,
+.summary p.price,
+.woocommerce-product-details__short-description,
+.summary form.cart {
+  text-align: center;
+}
+
+.single-product div.product .product_meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+
+div.product_meta > span {
+  margin: 0 5px 5px 0;
+  padding: 3px 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.single-product div.product .product_meta .sku_wrapper:last-child,
+.single-product div.product .product_meta .posted_in:last-child,
+.single-product div.product .product_meta .tagged_as:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+#tab-description {
+  text-align: center;
+}
+
+/* Backdrop image zoomée */
+.pswp__bg {
+  background: rgba(0,0,0,0.9);
+}
+
+.pswp__zoom-wrap img {
+  box-shadow: 0 0 25px black;
+}
+
+/*
+*
+*   ELEMENTS COMMUNS
+*
+*/
+
+.button {
+  background-color: #4B7281;
+  color: white;
+  transition: background-color .1s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.button:hover {
+  background-color: none;
+  color: white;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  background-color: hsl(197, 26%, 60%);
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.button:hover:before {
+  visibility: visible;
+  transform: scale(1);
+}
+
+.custom-logo-link {
+  width:180px;
+}
+
+button.menu-toggle,
+button.menu-toggle:hover {
+  background-color: #4B7281;
+  border: 0;
+  color: white;
+}
+
+button.menu-toggle::after,
+button.menu-toggle::before,
+button.menu-toggle span::before {
+  background-color: white;
+}
+
+span.onsale {
+  border: 0;
+  border-radius: 0;
+  background-color: #c10230;
+  color: white;
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+  padding: 0 15px;
+}
+
+span.price,
+.woocommerce-loop-product__link .price {
+  text-align: center;
+}
+
+.wc-block-grid__product-onsale span.onsale {
+  text-align: right;
+}
+
+img {
+  border-radius: 0;
+}
+
+/*
+*   UTILITAIRES
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
